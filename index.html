@@ -3,65 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ti-Aroi | Premium Thai Heritage Rice</title>
+    <title>Ti-Aroi | Premium Thai Heritage Rice | Support Local Farmers</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ti-green': {
+                            900: '#1A3326', // Deep Forest Green (Main CI)
+                            800: '#2A523E', // Medium Green
+                            100: '#E6F0EA', // Very Pale Green (Background)
+                        },
+                        'ti-accent': {
+                            700: '#C19A6B', // Desaturated Gold/Sand (Accent)
+                            200: '#F5EFE6', // Cream
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2 { font-family: 'Playfair Display', serif; }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
-<body class="bg-[#fdfcf8] text-stone-800">
+<body class="bg-ti-green-100 text-ti-green-900 font-sans">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div class="text-2xl font-bold text-orange-900">TI-AROI</div>
-        <div class="space-x-6 text-sm font-medium uppercase tracking-widest">
-            <a href="#about" class="hover:text-orange-700">Heritage</a>
-            <a href="#impact" class="hover:text-orange-700">Our Impact</a>
-            <a href="#products" class="hover:text-orange-700">Shop</a>
+    <nav class="sticky top-0 z-50 bg-ti-green-900 text-ti-accent-200 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-3 md:px-6 md:py-4 flex items-center justify-between">
+            <a href="#" class="text-xl md:text-2xl font-bold font-serif tracking-tight text-white">TI-AROI</a>
+            <button class="md:hidden p-2 rounded-lg hover:bg-ti-green-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m7 6H7"></path></svg>
+            </button>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wider">
+                <a href="#about" class="hover:text-white">Our Roots</a>
+                <a href="#farmers" class="hover:text-white">Farmer Support</a>
+                <a href="#products" class="hover:text-white">Our Grains</a>
+            </div>
         </div>
     </nav>
 
-    <header class="py-24 px-6 text-center">
-        <h1 class="text-5xl md:text-7xl mb-6">The Soul of <span class="italic text-orange-800">Thai Fields</span></h1>
-        <p class="text-lg text-stone-500 max-w-2xl mx-auto leading-relaxed">
-            Premium heritage rice, ethically sourced to empower Thai farming communities. 
-            From our soil to your soul.
-        </p>
+    <header class="bg-ti-green-900 text-ti-accent-200 py-16 md:py-28 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-serif font-semibold leading-tight mb-6 text-white">
+                Premium Rice. <span class="italic text-ti-accent-700">Fairly Sourced.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-ti-green-100 mb-10 leading-relaxed font-light">
+                Discover the authentic taste of Thailand’s heritage grains. Every grain we source directly empowers local farmers, cultivating a sustainable future, one bowl at a time.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#about" class="px-8 py-3 bg-ti-accent-700 text-ti-green-900 rounded-full font-semibold hover:bg-white transition text-center">Our Story</a>
+                <a href="#products" class="px-8 py-3 border border-ti-accent-200 text-ti-accent-200 rounded-full font-medium hover:bg-ti-green-800 transition text-center">Shop Our Grains</a>
+            </div>
+        </div>
     </header>
 
-    <section id="impact" class="bg-stone-900 text-stone-100 py-20">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl mb-6 italic text-orange-200">Supporting Those Who Feed the World</h2>
-            <p class="text-lg text-stone-400">
-                At Ti-Aroi, we cut out the middlemen. By working directly with local Thai farmers, 
-                we ensure fair wages and sustainable growth for the communities that cultivate 
-                the world's best Jasmine rice. Every bag you buy fuels a farmer's dream.
+    <section id="about" class="py-16 md:py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 space-y-6">
+                <h2 class="text-3xl md:text-4xl font-serif text-ti-green-900 italic">Cultivating Heritage</h2>
+                <p class="text-base md:text-lg text-ti-green-800 leading-relaxed">
+                    Ti-Aroi is deeply rooted in the heart of Thailand's agricultural landscape. We are more than just a rice brand; we are custodians of generations-old farming traditions, dedicated to preserving the exceptional quality of Thai heritage rice while innovating for a sustainable future.
+                </p>
+            </div>
+            <div class="order-1 md:order-2 bg-ti-green-100 aspect-video rounded-3xl flex items-center justify-center italic text-ti-green-900">
+                [Image: Traditional Farming]
+            </div>
+        </div>
+    </section>
+
+    <section id="farmers" class="py-16 md:py-24 px-4 bg-ti-green-900 text-ti-green-100">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-serif text-white mb-12">Empowering Thai Farmers</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="bg-ti-green-800 p-8 rounded-2xl border border-ti-green-800 hover:border-ti-accent-700 transition">
+                    <div class="w-12 h-12 bg-ti-accent-700 rounded-full mb-6 flex items-center justify-center text-ti-green-900 font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Direct Sourcing</h3>
+                    <p class="text-ti-green-200 text-sm">We bypass middlemen, working directly with farming collectives to ensure they receive a truly fair price for their labor.</p>
+                </div>
+                 <div class="bg-ti-green-800 p-8 rounded-2xl border border-ti-green-800 hover:border-ti-accent-700 transition">
+                    <div class="w-12 h-12 bg-ti-accent-700 rounded-full mb-6 flex items-center justify-center text-ti-green-900 font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Sustainable Growth</h3>
+                    <p class="text-ti-green-200 text-sm">Every purchase contributes to a dedicated fund that provides modern tools and training for sustainable, organic-first farming practices.</p>
+                </div>
+                 <div class="bg-ti-green-800 p-8 rounded-2xl border border-ti-green-800 hover:border-ti-accent-700 transition">
+                    <div class="w-12 h-12 bg-ti-accent-700 rounded-full mb-6 flex items-center justify-center text-ti-green-900 font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Community Wealth</h3>
+                    <p class="text-ti-green-200 text-sm">Our model focuses on keeping wealth within the community, supporting local schools and infrastructure, fostering long-term prosperity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-16 md:py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif text-ti-green-900 text-center mb-16">Our Signature Grains</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-ti-green-100 p-6 rounded-3xl group border border-ti-green-100 hover:border-ti-accent-700 transition flex flex-col">
+                    <div class="h-64 sm:h-72 bg-white rounded-2xl mb-6 flex items-center justify-center text-ti-green-800 italic group-hover:shadow-lg transition">
+                        [Image: Jasmine Rice Pkg]
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-ti-green-900 flex-grow">Aromatic Hom Mali (Jasmine Rice)</h3>
+                    <p class="text-ti-green-800 text-sm mb-6 leading-relaxed">Our premium Hom Mali rice is renowned for its delicate, natural pandan-like aroma and soft, velvety texture that cooks up fluffily perfect every time.</p>
+                    <button class="w-full text-center px-6 py-2 border-2 border-ti-green-900 text-ti-green-900 rounded-full hover:bg-ti-green-900 hover:text-white transition font-medium">Learn More</button>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-ti-green-200 text-center bg-ti-green-100">
+        <div class="max-w-xl mx-auto px-4 space-y-4">
+            <h3 class="text-xl font-serif font-bold text-ti-green-900">TI-AROI</h3>
+            <p class="text-ti-green-800 text-sm font-light leading-relaxed">
+                Empowering farmers, preserving tradition, and bringing the authentic flavor of Thailand to your table. Experience the difference.
+            </p>
+            <p class="text-xs uppercase tracking-wider text-ti-green-800 pt-4">
+                &copy; 2026 Ti-Aroi. A Commitment to Community & Taste.
             </p>
         </div>
-    </section>
-
-    <section id="products" class="py-24 max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="bg-stone-200 aspect-[4/5] rounded-3xl flex items-center justify-center italic text-stone-500">
-                [Product Image: Premium Jasmine Rice]
-            </div>
-            <div>
-                <h2 class="text-4xl mb-6">Signature Jasmine Rice</h2>
-                <p class="text-stone-600 mb-8 leading-relaxed text-lg">
-                    Known for its natural pandan-like aroma and silky texture. 
-                    Our signature grain is aged to perfection, ensuring a consistent 
-                    fluffiness that complements any cuisine.
-                </p>
-                <button class="border-2 border-stone-800 px-8 py-3 rounded-full hover:bg-stone-800 hover:text-white transition">
-                    Inquire for Export
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-stone-200 text-center text-stone-400 text-xs uppercase tracking-widest">
-        &copy; 2026 Ti-Aroi Thai Heritage. Empowering Farmers, Enriching Meals.
     </footer>
 
 </body>
